@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Essential Space Prototype · Jaiwardhan Panwar</title>
+<meta name="description" content="Clickable UI/UX concept for Nothing Phone (3a): a visible capture moment with undo, a review tray for accidental captures, and search that answers the question.">
+<meta name="author" content="Jaiwardhan Panwar">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Essential Space, redesigned">
+<meta property="og:description" content="A UI/UX concept for Nothing Phone (3a) by Jaiwardhan Panwar. Tap through the prototype.">
+<meta property="og:image" content="https://essential-space-prototype.vercel.app/og.png">
+<meta property="og:url" content="https://essential-space-prototype.vercel.app/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/fonts/doto-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/space-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<main>
+<div class="wrap">
+<div class="side">
+<div class="lbl" style="color:var(--pt2)">UI/UX concept · Phone (3a)</div>
+<h1 style="margin-top:12px">Essential Space, redesigned</h1>
+<p>Most Essential Key presses on my parents' phones were accidents they never noticed. This prototype shows three fixes: a visible capture moment with undo, a review tray for likely accidents, and search that answers the question instead of listing screenshots.</p>
+<div class="flows">
+<button class="flow" data-flow="press"><span class="lbl">Flow 1</span>Press the key by accident</button>
+<button class="flow" data-flow="review"><span class="lbl">Flow 2</span>Clean up accidental captures</button>
+<button class="flow" data-flow="find"><span class="lbl">Flow 3</span>Find a bill you saved</button>
+</div>
+<p style="margin-top:22px;font-size:14px">Tap through the phone. The light grey key on its right edge is the Essential Key; the dark one above it is the power key.</p>
+</div>
+<div class="stagebox" id="box"><div class="stage" id="stage">
+<div class="phone scr" id="s1" hidden>
+  <div class="sb"><span>12:47</span><span class="r"><span>84</span><span class="batt"></span></span></div>
+  <div style="text-align:center;margin-top:96px">
+    <div class="dot" style="font-size:92px;font-weight:800;line-height:1;letter-spacing:0">12:47</div>
+    <div class="lbl" style="margin-top:14px;color:var(--t2)">Sun, 4 Oct</div>
+  </div>
+  <div id="chip" hidden style="position:absolute;right:0;top:380px;width:300px;background:#fff;color:#000;border-radius:22px 0 0 22px;padding:16px 18px 16px 20px">
+    <div class="row" style="gap:10px"><span style="width:10px;height:10px;border-radius:50%;background:var(--red)"></span><span class="dot" style="font-size:24px;font-weight:800;letter-spacing:1px">CAPTURED</span></div>
+    <div class="mono" style="font-size:11px;color:#555;margin-top:8px;line-height:1.5">Looks accidental<br>Phone was locking</div>
+    <div class="row" style="margin-top:14px;gap:8px">
+      <button class="btn fill" data-act="undo" style="background:#000;color:#fff;border-color:#000;height:36px">Undo</button>
+      <button class="btn" data-act="keep" style="color:#000;border-color:#000;height:36px;background:#fff">Keep</button>
+    </div>
+  </div>
+  <div id="chipbar" hidden style="position:absolute;right:0;top:470px;width:4px;height:56px;background:var(--red);border-radius:2px 0 0 2px"></div>
+  <div id="lockstatus" style="position:absolute;bottom:96px;width:100%;text-align:center" class="lbl">Press the Essential Key on the right edge</div><button class="btn" data-go="s2" style="position:absolute;bottom:36px;left:50%;transform:translateX(-50%)">Open Essential Space</button>
+</div><div class="phone scr" id="s2" hidden>
+  <div class="sb"><span>12:49</span><span class="r"><span>84</span><span class="batt"></span></span></div>
+  <div class="pad">
+    <div class="row" style="justify-content:space-between;margin-top:18px">
+      <div class="dot" style="font-size:34px;font-weight:800;line-height:1.05">Essential<br>Space</div>
+      <svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+    </div>
+    <button class="search hit" data-go="s4" style="margin-top:22px;width:100%;border:0;text-align:left;font-family:SG"><svg class="i" viewBox="0 0 24 24" style="stroke:var(--t3)"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Search what you saved</button>
+
+    <div class="card" id="revcard" style="margin-top:18px">
+      <div class="row" style="align-items:flex-start;gap:16px">
+        <div class="dot" id="revnum" style="font-size:52px;font-weight:800;color:var(--red);line-height:.9">9</div>
+        <div>
+          <div style="font-size:18px;line-height:1.3">captures look accidental</div>
+          <div class="lbl" style="margin-top:6px">Clears 11 Oct unless kept</div>
+        </div>
+      </div>
+      <div class="row" style="margin-top:16px;gap:10px"><button class="btn fill" data-go="s3" style="flex:1">Review</button><button class="btn" data-act="clearall" style="flex:1">Clear all</button></div>
+    </div>
+
+    <div class="lbl" style="margin-top:26px">Today</div>
+    <button class="item hit" data-go="s5">
+      <div class="thumb"><div style="position:absolute;inset:8px;background:#e9e9e9;border-radius:4px"></div><div style="position:absolute;left:14px;top:16px;width:22px;height:4px;background:#999"></div><div style="position:absolute;left:14px;top:26px;width:28px;height:4px;background:#bbb"></div></div>
+      <div><div class="t">Electricity bill</div><div class="m">₹1,240 · Due 12 Oct</div></div>
+    </button>
+    <div class="item">
+      <div class="thumb" style="display:flex;align-items:center;justify-content:center"><svg class="i" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
+      <div><div class="t">Call the plumber on Tuesday</div><div class="m">Voice note · 0:14</div></div>
+    </div>
+    <div class="item">
+      <div class="thumb" style="background:#2a2a2a"><div style="position:absolute;left:10px;top:10px;width:36px;height:22px;background:#555;border-radius:4px"></div><div style="position:absolute;left:10px;top:38px;width:30px;height:4px;background:#777"></div></div>
+      <div><div class="t">Paneer tikka recipe</div><div class="m">6 steps · 3 ingredients missing</div></div>
+    </div>
+    <div class="lbl" style="margin-top:14px">Yesterday</div>
+    <div class="item">
+      <div class="thumb"><div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,#262626 0 8px,#1c1c1c 8px 16px)"></div><div style="position:absolute;left:24px;top:18px;width:9px;height:9px;border-radius:50%;background:#fff"></div></div>
+      <div><div class="t">Clinic address, Vashi</div><div class="m">Location · Open in maps</div></div>
+    </div>
+  </div>
+</div><div class="phone scr" id="s3" hidden>
+  <div class="sb"><span>12:50</span><span class="r"><span>84</span><span class="batt"></span></span></div>
+  <div class="pad">
+    <button class="ic" data-go="s2" aria-label="Back" style="margin-top:14px"><svg class="i" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <div style="font-size:30px;font-weight:400;margin-top:14px">Review</div>
+    <div class="lbl" style="margin-top:8px">9 likely accidental · Auto-clears 11 Oct</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px" id="grid">
+      <div class="tile"><div style="position:relative;height:136px;border-radius:14px;overflow:hidden;border:1px solid #262626"><div style="position:absolute;inset:0;background:#070707"></div><div style="position:absolute;top:8px;right:8px;width:22px;height:22px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:#000;fill:none;stroke-width:3"><path d="M5 12l5 5 9-10"/></svg></div></div><div class="lbl" style="margin-top:7px;font-size:10px">Screen off</div></div>
+<div class="tile"><div style="position:relative;height:136px;border-radius:14px;overflow:hidden;border:1px solid #262626"><div style="position:absolute;inset:0;background:#1b1b1b"></div><div style="position:absolute;left:22px;right:22px;top:30px;height:20px;border-radius:10px;background:#3a3a3a"></div><div style="position:absolute;left:22px;right:22px;top:60px;height:20px;border-radius:10px;background:#3a3a3a"></div><div style="position:absolute;left:22px;right:22px;top:90px;height:20px;border-radius:10px;background:#3a3a3a"></div><div style="position:absolute;top:8px;right:8px;width:22px;height:22px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:#000;fill:none;stroke-width:3"><path d="M5 12l5 5 9-10"/></svg></div></div><div class="lbl" style="margin-top:7px;font-size:10px">Power menu</div></div>
+<div class="tile"><div style="position:relative;height:136px;border-radius:14px;overflow:hidden;border:1px solid #262626"><div style="position:absolute;inset:0;background:#0d0d0d"></div><div class="dot" style="position:absolute;top:38px;width:100%;text-align:center;font-size:30px;font-weight:800;color:#555">12:4</div><div style="position:absolute;top:8px;right:8px;width:22px;height:22px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:#000;fill:none;stroke-width:3"><path d="M5 12l5 5 9-10"/></svg></div></div><div class="lbl" style="margin-top:7px;font-size:10px">While locking</div></div>
+<div class="tile"><div style="position:relative;height:136px;border-radius:14px;overflow:hidden;border:1px solid #262626"><div style="position:absolute;inset:0;background:radial-gradient(circle at 40% 60%,#2a2a2a,#0a0a0a 70%)"></div><div style="position:absolute;top:8px;right:8px;width:22px;height:22px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:#000;fill:none;stroke-width:3"><path d="M5 12l5 5 9-10"/></svg></div></div><div class="lbl" style="margin-top:7px;font-size:10px">In pocket</div></div>
+<div class="tile"><div style="position:relative;height:136px;border-radius:14px;overflow:hidden;border:2px solid #fff"><div style="position:absolute;inset:0;background:#1a1a1a"></div><div style="position:absolute;left:16px;right:16px;top:18px;bottom:18px;background:#e6e6e6;border-radius:6px"></div><div style="position:absolute;left:26px;top:32px;width:50px;height:6px;background:#999"></div><div style="position:absolute;left:26px;top:46px;width:60px;height:5px;background:#bbb"></div><div style="position:absolute;left:26px;top:58px;width:40px;height:5px;background:#bbb"></div><div style="position:absolute;top:8px;right:8px;height:22px;padding:0 8px;border-radius:11px;background:#fff;color:#000;font-family:SM;font-size:10px;letter-spacing:.06em;display:flex;align-items:center">KEEP</div></div><div class="lbl" style="margin-top:7px;font-size:10px;color:#fff">Pickup</div></div>
+<div class="tile"><div style="position:relative;height:136px;border-radius:14px;overflow:hidden;border:1px solid #262626"><div style="position:absolute;inset:0;background:#070707"></div><div style="position:absolute;top:8px;right:8px;width:22px;height:22px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:#000;fill:none;stroke-width:3"><path d="M5 12l5 5 9-10"/></svg></div></div><div class="lbl" style="margin-top:7px;font-size:10px">Screen off</div></div>
+<div class="tile"><div style="position:relative;height:136px;border-radius:14px;overflow:hidden;border:1px solid #262626"><div style="position:absolute;inset:0;background:#0d0d0d"></div><div class="dot" style="position:absolute;top:38px;width:100%;text-align:center;font-size:30px;font-weight:800;color:#555">12:4</div><div style="position:absolute;top:8px;right:8px;width:22px;height:22px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:#000;fill:none;stroke-width:3"><path d="M5 12l5 5 9-10"/></svg></div></div><div class="lbl" style="margin-top:7px;font-size:10px">While locking</div></div>
+<div class="tile"><div style="position:relative;height:136px;border-radius:14px;overflow:hidden;border:1px solid #262626"><div style="position:absolute;inset:0;background:#1b1b1b"></div><div style="position:absolute;left:22px;right:22px;top:30px;height:20px;border-radius:10px;background:#3a3a3a"></div><div style="position:absolute;left:22px;right:22px;top:60px;height:20px;border-radius:10px;background:#3a3a3a"></div><div style="position:absolute;left:22px;right:22px;top:90px;height:20px;border-radius:10px;background:#3a3a3a"></div><div style="position:absolute;top:8px;right:8px;width:22px;height:22px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:#000;fill:none;stroke-width:3"><path d="M5 12l5 5 9-10"/></svg></div></div><div class="lbl" style="margin-top:7px;font-size:10px">Power menu</div></div>
+<div class="tile"><div style="position:relative;height:136px;border-radius:14px;overflow:hidden;border:1px solid #262626"><div style="position:absolute;inset:0;background:#161616"></div><div style="position:absolute;left:16px;top:60px;width:14px;height:14px;border-radius:4px;background:#444"></div><div style="position:absolute;left:40px;top:60px;width:14px;height:14px;border-radius:4px;background:#444"></div><div style="position:absolute;left:64px;top:60px;width:14px;height:14px;border-radius:4px;background:#444"></div><div style="position:absolute;left:88px;top:60px;width:14px;height:14px;border-radius:4px;background:#444"></div><div style="position:absolute;left:16px;top:84px;width:14px;height:14px;border-radius:4px;background:#444"></div><div style="position:absolute;left:40px;top:84px;width:14px;height:14px;border-radius:4px;background:#444"></div><div style="position:absolute;left:64px;top:84px;width:14px;height:14px;border-radius:4px;background:#444"></div><div style="position:absolute;left:88px;top:84px;width:14px;height:14px;border-radius:4px;background:#444"></div><div style="position:absolute;top:8px;right:8px;width:22px;height:22px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:#000;fill:none;stroke-width:3"><path d="M5 12l5 5 9-10"/></svg></div></div><div class="lbl" style="margin-top:7px;font-size:10px">Pickup</div></div>
+    </div>
+    <div class="row" style="margin-top:20px;gap:10px;align-items:flex-start">
+      <svg class="i" viewBox="0 0 24 24" style="stroke:var(--t3);width:18px;height:18px;flex:none;margin-top:1px"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8v.01"/></svg>
+      <div class="lbl" style="line-height:1.6;text-transform:none;font-size:12px;letter-spacing:.02em">Flagged because the key was pressed within a second of the power key, screen-off, or while the phone was in a pocket.</div>
+    </div>
+  </div>
+  <div style="position:absolute;left:20px;right:20px;bottom:34px" class="row"><span class="lbl" id="keepn" style="flex:1;text-align:center">1 kept · tap to change</span><button class="btn fill" data-act="clearsel" id="clearbtn" style="flex:1.4;height:48px">Clear 8</button></div>
+</div><div class="phone scr" id="s4" hidden>
+  <div class="sb"><span>12:52</span><span class="r"><span>84</span><span class="batt"></span></span></div>
+  <div class="pad">
+    <div class="search" style="margin-top:18px;color:#fff;border:1px solid #fff;background:#000"><button class="ic" data-go="s2" aria-label="Back"><svg class="i" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>when is the electricity bill due<span style="width:2px;height:22px;background:var(--red)"></span></div>
+    <div class="lbl" style="margin-top:28px">Answer</div>
+    <div class="card" style="margin-top:12px">
+      <div style="font-size:30px;line-height:1.15;font-weight:300">₹1,240, due<br>on 12 October</div>
+      <div class="m mono" style="font-size:11px;color:var(--t2);margin-top:12px">From a screenshot · 2 Oct, 9:14 PM</div>
+      <div class="row" style="margin-top:18px;gap:10px"><button class="btn fill" data-act="remind" id="remindbtn" style="flex:1">Remind me</button><button class="btn" data-go="s5" style="flex:1">Open</button></div>
+    </div>
+    <div class="lbl" style="margin-top:28px">Related · 3</div>
+    <div class="item">
+      <div class="thumb"><div style="position:absolute;inset:8px;background:#e9e9e9;border-radius:4px"></div><div style="position:absolute;left:14px;top:16px;width:22px;height:4px;background:#999"></div></div>
+      <div><div class="t">Electricity bill, September</div><div class="m">₹1,180 · Paid</div></div>
+    </div>
+    <div class="item">
+      <div class="thumb" style="display:flex;align-items:center;justify-content:center"><svg class="i" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
+      <div><div class="t">"Pay light bill before Friday"</div><div class="m">Voice note · 0:06</div></div>
+    </div>
+    <div class="item">
+      <div class="thumb"><div style="position:absolute;inset:8px;background:#e9e9e9;border-radius:4px"></div><div style="position:absolute;left:14px;top:16px;width:26px;height:4px;background:#999"></div></div>
+      <div><div class="t">Electricity bill, August</div><div class="m">₹1,310 · Paid</div></div>
+    </div>
+  </div>
+</div><div class="phone scr" id="s5" hidden>
+  <div class="sb"><span>12:53</span><span class="r"><span>84</span><span class="batt"></span></span></div>
+  <div class="pad">
+    <div class="row" style="justify-content:space-between;margin-top:14px"><button class="ic" data-act="back" aria-label="Back"><svg class="i" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></svg></div>
+    <div style="margin-top:16px;height:230px;border-radius:18px;background:#1a1a1a;position:relative;overflow:hidden">
+      <div style="position:absolute;left:84px;right:84px;top:22px;bottom:-20px;background:#ececec;border-radius:10px;padding:18px">
+        <div style="height:8px;width:60%;background:#999;border-radius:4px"></div>
+        <div style="height:6px;width:80%;background:#c8c8c8;border-radius:3px;margin-top:12px"></div>
+        <div style="height:6px;width:70%;background:#c8c8c8;border-radius:3px;margin-top:8px"></div>
+        <div style="font-family:SG;font-size:30px;color:#111;margin-top:18px">₹1,240</div>
+        <div style="height:6px;width:50%;background:#c8c8c8;border-radius:3px;margin-top:10px"></div>
+      </div>
+    </div>
+    <div style="font-size:26px;margin-top:20px">Electricity bill</div>
+    <div class="lbl" style="margin-top:6px">Screenshot · 2 Oct, 9:14 PM</div>
+    <div class="lbl" style="margin-top:24px">Key details</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:10px">
+      <div class="card" style="padding:14px"><div class="lbl">Amount</div><div style="font-size:19px;margin-top:6px">₹1,240</div></div>
+      <div class="card" style="padding:14px"><div class="lbl">Due</div><div style="font-size:19px;margin-top:6px">12 Oct</div></div>
+      <div class="card" style="padding:14px"><div class="lbl">Account</div><div style="font-size:19px;margin-top:6px">··4417</div></div>
+    </div>
+    <div class="lbl" style="margin-top:22px">Summary</div>
+    <div style="font-size:16px;line-height:1.5;color:var(--t2);margin-top:8px">October bill for home. Pay before 12 Oct to avoid a late fee.</div>
+    <div class="card row" style="margin-top:20px;justify-content:space-between;padding:14px 18px">
+      <div class="row" style="gap:12px"><svg class="i" viewBox="0 0 24 24"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg><div><div style="font-size:16px">Remind me</div><div class="lbl" style="margin-top:2px">10 Oct, 10:00 AM</div></div></div>
+      <button class="tog on" data-act="tog" aria-label="Remind me" aria-pressed="true"><span></span></button>
+    </div>
+  </div>
+</div>
+<button class="key" aria-label="Power key" data-act="power"></button>
+<button class="key ess" aria-label="Essential Key" data-act="press"></button>
+<span class="keylab">ESSENTIAL KEY</span>
+</div></div>
+</div>
+<div class="foot">Unsolicited concept by Jaiwardhan Panwar. Not affiliated with or endorsed by Nothing Technology Limited.</div>
+</main>
+<script src="/app.js" defer></script>
+</body>
+</html>
