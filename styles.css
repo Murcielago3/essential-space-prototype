@@ -53,6 +53,9 @@ body{background:var(--page);color:var(--pt);font-family:SG,sans-serif;padding-in
 .flow{border:1px solid var(--pline);border-radius:16px;padding:14px 16px;background:#111;color:var(--pt);text-align:left;font-family:SG;font-size:15px;cursor:pointer}
 .flow:hover,.flow:focus-visible{border-color:#fff;outline:none}
 .flow .lbl{display:block;margin-bottom:4px}
+a.flow{display:flex;justify-content:space-between;align-items:center;gap:12px;text-decoration:none}
+a.flow .arrow{font-family:SM,monospace;font-size:12px;letter-spacing:.06em;color:var(--pt2);white-space:nowrap}
+a.flow:hover .arrow,a.flow:focus-visible .arrow{color:#fff}
 .stagebox{position:relative}
 .stage{position:relative;width:450px;height:925px;transform-origin:top left}
 .stage .phone{position:absolute;left:0;top:0}
